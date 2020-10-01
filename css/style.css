@@ -1,0 +1,10 @@
+body{
+	text-align: center;
+	background: #0E93F9;
+}
+div.container{
+	background: #D5D4D4;
+	padding: 2%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
