@@ -6,56 +6,57 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<h1>Ejercicio 1</h1>
-	<h4>Frase invertida</h4>
-	<button class="btn btn-primary" onclick="Ejercicio1()" id="ejecuta">Ejecutar</button>
-	<p id="fraseinversa"></p>
+	<div class="container">	
+		<h1>Ejercicio 1</h1>
+		<h4>Frase invertida</h4>
+		<button class="btn btn-primary" onclick="Ejercicio1()" id="ejecuta">Ejecutar</button>
+		<p id="fraseinversa"></p>
 
-	<hr>
-	
-	<h1>Ejercicio 2</h1>
-	<h4>Frase dividida</h4>
-	Frase:<br>
-	<div class="d-flex justify-content-center">
-		<input class="form-control col-4 " type="text" id="palabra" placeholder="Ingrese una frase">
-		<button class="btn btn-secondary" onclick="Ejercicio2()">Enviar</button>
+		<hr>
+		
+		<h1>Ejercicio 2</h1>
+		<h4>Frase dividida</h4>
+		Frase:<br>
+		<div class="d-flex justify-content-center">
+			<input class="form-control col-4 " type="text" id="palabra" placeholder="Ingrese una frase">
+			<button class="btn btn-secondary" onclick="Ejercicio2()">Enviar</button>
+		</div>
+		
+		<p id="frase"></p>
+		
+		<hr>
+		<h1>Ejercicio 3</h1>
+		<h4>Lista de nombres</h4>
+		Nombre: <br>
+		<div class="d-flex justify-content-center">
+			<input class="form-control col-4" type="text" id="textoIn" placeholder="Ingrese un nombre">
+			<button class="btn btn-success" id="botonIn">Ingresar</button>
+		</div>
+		
+		<div class="container border bg-light mt-3 p-3 d-flex justify-content-center">
+			<ol id="lista">Lista</ol>
+		</div>
+
+		<hr>
+
+		<h1>Ejercicio 4</h1>
+		<h4>Calculadora</h4>
+		<div class="a d-flex justify-content-center">
+			<input type="text" class="form-control col-2" id="num1" placeholder="Ingrese un numero">
+			<select class="form-control col-1" id="operador">
+				<option value="1">+</option>
+				<option value="2">-</option>
+				<option value="3">/</option>
+				<option value="4">X</option>
+			</select>
+			<input type="text" class="form-control col-2" id="num2" placeholder="Ingrese un numero"><br><br>
+		</div>
+
+		<button class="btn btn-warning" onclick="Ejercicio4()">Calcular</button>
+		<p id="resultado"></p>
+
+		<script src="js/logic.js"></script>
+
 	</div>
-	
-	<p id="frase"></p>
-	
-	<hr>
-	<h1>Ejercicio 3</h1>
-	<h4>Lista de nombres</h4>
-	Nombre: <br>
-	<div class="d-flex justify-content-center">
-		<input class="form-control col-4" type="text" id="textoIn" placeholder="Ingrese un nombre">
-		<button class="btn btn-success" id="botonIn">Ingresar</button>
-	</div>
-	
-	<div class="container border bg-light mt-3 p-3 d-flex justify-content-center">
-		<ol id="lista">Lista</ol>
-	</div>
-
-	<hr>
-
-	<h1>Ejercicio 4</h1>
-	<h4>Calculadora</h4>
-	<div class="a d-flex justify-content-center">
-		<input type="text" class="form-control col-2" id="num1" placeholder="Ingrese un numero">
-		<select class="form-control col-1" id="operador">
-			<option value="1">+</option>
-			<option value="2">-</option>
-			<option value="3">/</option>
-			<option value="4">X</option>
-		</select>
-		<input type="text" class="form-control col-2" id="num2" placeholder="Ingrese un numero"><br><br>
-	</div>
-
-	<button class="btn btn-warning" onclick="Ejercicio4()">Calcular</button>
-	<p id="resultado"></p>
-
-	<script src="js/logic.js"></script>
-
-
 </body>
 </html>
