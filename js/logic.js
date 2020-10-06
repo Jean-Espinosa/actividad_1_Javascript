@@ -1,6 +1,104 @@
 console.log("***Hola Mundo***");
 
-/* EJERCICIO 3*/
+/*EJERCICIO CALCULADORA CLASE 06/10/2020*/
+
+
+console.log("*** Calculadora ***");
+
+const calculadora =(operacion)=>{
+
+	let A= document.getElementById("valorA");
+	let B= document.getElementById("valorB");
+	let resultado= document.getElementById("resultado");
+
+	let valorA= parseInt(A.value);
+	let valorB= parseInt(B.value);
+	let rta;
+
+	//console.log("operacion =>"+operacion);
+
+	switch(operacion){
+		case('suma'):
+			rta= valorA+valorB;
+			break;
+		case('resta'):
+			rta= valorA-valorB;
+			break;
+		case('multiplica'):
+			rta= valorA*valorB;
+			break;
+		case('divide'):
+			rta= valorA/valorB;
+			break;
+		case('limpia'):	
+			A.value="";
+			B.value="";
+			rta="";
+			break;
+		default:
+			break;
+	}
+
+	resultado.innerText= rta;
+	
+}
+//********************************
+/*FRASE AL REVES Y ESPACIOS EN BLANCO*/
+//*********************************
+const botonFraseIn= document.getElementById("botonFraseIn");
+
+const tamano= document.getElementById("tamano");
+const espacios= document.getElementById("espacios");
+const reves= document.getElementById("reves");
+
+
+const salida= document.getElementById("salida");
+let fraseSalida= "";
+const cadena = [];
+
+botonFraseIn.addEventListener('click',() =>{
+	const fraseIn= document.getElementById("fraseIn").value;
+
+	let arrayFrase= fraseIn.split("");
+	let contador= 0;
+
+	console.log(arrayFrase); 
+
+	//-------------------------------RECORRE VECTOR POR POSICION INDICE (i)
+	/*for (let i = 0; i<arrayFrase.length; i++) {
+		if (arrayFrase[i]==" ") {
+			contador ++;
+		}
+	}*/
+
+	//-------------------------------recorre vector con foreach
+	/*arrayFrase.forEach(caracter =>{
+		if (caracter==" ") {
+			contador ++;
+		}
+	});*/
+
+	//------------------------------- RECORRE VECTOR CON FOR OF
+	for (let caracter of arrayFrase) {
+		if (caracter== " ") {
+
+			//contando espacios en blanco
+			contador ++;
+
+			//concatena un guion a la frase
+			
+		}
+		fraseSalida = fraseSalida + caracter + "-";
+	}
+	tamano.innerText= "El tamano del arreglo es"+arrayFrase.length;
+	espacios.innerText= "Espacios en blanco "+contador;
+	reves.innerText= arrayFrase.reverse();
+
+	salida.innerText= fraseSalida;
+});
+
+
+/* EJERCICIO 1*/
 function Ejercicio1(){
 	let cadena = "Prueba Javascript";
 	let cadenarevertida = "";
@@ -104,5 +202,5 @@ function Ejercicio4(){
 		resultado= num1 * num2;
 		signo= "*";
 	}
-	document.getElementById('resultado').innerHTML=num1+' '+signo+' '+num2+' = '+resultado;
+	document.getElementById('result').innerHTML=num1+' '+signo+' '+num2+' = '+resultado;
 }
